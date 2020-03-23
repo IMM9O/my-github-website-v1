@@ -9,7 +9,7 @@ const main = {
     {
       name: 'Home',
       iconName: 'logo-firefox',
-      link: 'https://sivanesh-s.github.io'
+      link: 'https://imm9o.github.io/'
     },
     {
       name: 'Github',
