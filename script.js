@@ -2,7 +2,7 @@ const getDOM = selector => () => {
   return document.querySelector(selector);
 };
 
-document.title = `${main.name} | ${main.role}`
+document.title = `${main.name} | ${main.role}`;
 
 // Values DOM nodes
 const dom = {
@@ -19,8 +19,6 @@ const dom = {
 };
 
 function assignDOM(dom, value, options) {
-  console.log('dom, value, img:', dom, value, img);
-
   if (options && options.isImg) {
     dom.src = value;
     return;
@@ -48,7 +46,7 @@ assignDOM(dom.main.role(), main.role);
 const connectsDOM = main.connects
   .map(
     ({ name, iconName, link }) =>
-      `<a href=${link} target="_blank"><ion-icon name="${iconName}" title="${name}"></ion-icon></a>`
+      `<a href=${link} target="_blank"><i class="${iconName}" title="${name}"></i></a>`
   )
   .join('\n');
 assignDOM(dom.main.connects(), connectsDOM);
@@ -56,8 +54,11 @@ assignDOM(dom.main.connects(), connectsDOM);
 // Internal Links
 const getLinks = links =>
   links
-    .map(({ name, link }) => `<a href="${link}" class="text-pink-500" >${name}</a>`)
-    .map((link, index, links) => index === links.length - 1 ? link: `${link} - `)
+    .map(
+      ({ name, link }) => `<a href="${link}" class="text-pink-500" >${name}</a>`
+    )
+    .map((link, index, links) =>
+      index === links.length - 1 ? link : `${link} - `
+    )
     .join('\n');
 assignDOM(dom.main.links(), getLinks(main.links));
-
