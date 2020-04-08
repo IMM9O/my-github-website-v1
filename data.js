@@ -2,7 +2,7 @@ const main = {
   name: 'Islam Muhammad',
   mail: 'islam.muhamed.90@gmail.com',
   img:
-    'https://media-exp1.licdn.com/dms/image/C4D03AQEohXhQ_3N44g/profile-displayphoto-shrink_200_200/0?e=1590624000&v=beta&t=fF0SYVLUvSwux-lG5tVTDpAUoari2e4dShPffr6XX5w',
+    'https://media-exp1.licdn.com/dms/image/C4D03AQFLszyu_a6aTw/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=9c7xM2ev8ekMdXVY-6doNEj7YVmtmT2_jcuianiKwq8',
   role: ['FrontEnd Developer'],
   // Refer https://fontawesome.com/icons/ and put the class name inside iconName key
   connects: [
