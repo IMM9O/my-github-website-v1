@@ -1,7 +1,7 @@
 const main = {
   name: 'Islam Muhammad',
   mail: 'islam.muhamed.90@gmail.com',
-  img: './img/my-avtar-2.jpg',
+  img: './img/my-avatar.jpg',
   role: ['FrontEnd Developer'],
   // Refer https://fontawesome.com/icons/ and put the class name inside iconName key
   connects: [
