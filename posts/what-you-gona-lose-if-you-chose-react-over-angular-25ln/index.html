@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
 
-    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <style>* {
   margin: 0;
   padding: 0;
@@ -194,6 +193,31 @@ nav > ul > li:hover > a {
 
 .ltag__link {
   display: none;
+}
+
+.my-avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  border: 5px solid #02066F;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 </style>
   </head>
@@ -478,8 +502,5 @@ nav > ul > li:hover > a {
     <footer>
 
     </footer>
-
-    <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
-    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
   </body>
 </html>
