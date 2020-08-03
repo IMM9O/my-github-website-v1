@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMM9O | </title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 20px;
+  }
+}
+a:link,
+a:visited {
+  color: #222;
+}
+
+header,
+footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 4em;
+  font-size: 0.7em;
+  color: #888;
+}
+
+header {
+  border-bottom: solid 1px #eee;
+}
+
+footer {
+  margin-top: 6em;
+  border-top: solid 1px #eee;
+}
+
+header .container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 700px;
+  }
+}
+hr {
+  border-style: none;
+  border-bottom: solid 1px #eee;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.post-content img {
+  width: 100%;
+}
+
+p.meta {
+  color: #444;
+  font-size: 0.8em;
+}
+
+ul.listing {
+  list-style: none;
+  list-style-position: outside;
+  padding-top: 1em;
+  padding-left: 0;
+}
+ul.listing li {
+  margin-bottom: 3em;
+}
+ul.listing h3 {
+  padding-top: 0;
+  margin-top: 0;
+}
+ul.listing p.meta {
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif;
+  line-height: 1.1;
+  color: #111;
+}
+
+h2 {
+  font-size: 34px;
+  letter-spacing: -0.01em;
+}
+h2 small {
+  font-size: 0.5em;
+  font-weight: normal;
+  color: #888;
+}
+
+h3 {
+  margin-top: 2em;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figcaption {
+  text-align: center;
+  color: #888;
+  font-size: 0.7em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -2em;
+  padding-left: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-left: solid 3px #888;
+}
+blockquote em {
+  font-style: normal;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #eee;
+  font-size: 0.7em;
+  overflow-x: scroll;
+}
+
+nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 0;
+  list-style-type: none;
+  margin: 0 -3px;
+}
+
+nav > ul > a > li {
+  margin: 0 3px;
+  padding: 5px 15px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav > ul > li:hover {
+  background: #40407a;
+  color: #fff;
+}
+
+/** Dev.to */
+
+.ltag__link {
+  display: none;
+}
+</style>
+  </head>
+  <body>
+    <header>
+      	<div class="container">
+			<h4>Islam Muhammad</h4>
+			<nav>
+				<ul>
+					<a href="/"><li>Home</li><a/>
+					<a href="/blog"><li>Blog</li><a/>
+					<a href="/"><li>About</li><a/>
+				</ul>
+			</nav>
+		</div>
+    </header>
+    <div class="container">
+        
+<p class="meta">
+    Published on Apr  3 by <a href="https://dev.to/imm9o" target="_blank"> Islam Muhammad </a>
+    <br />
+    
+    Orignaly posted on <a href="https://dev.to/imm9o/every-performance-tips-for-angular-app-runtime-part-hhg" target="_blank">dev.to</a>
+</p>
+<div class="post-content">
+  <p>This is the second part of <a href="https://dev.to/imm9o/every-performance-tips-for-angular-app-25c4">Every Performance tips for the angular app</a>, in this post my primary focus here to list every performance tips about runtime and what to avoid or optimize.</p>
+
+<h2>
+  <a name="avoid-render-large-dom-tree-in-views" href="#avoid-render-large-dom-tree-in-views" class="anchor">
+  </a>
+  Avoid render large DOM Tree in views
+</h2>
+
+<p><strong>The Problem</strong></p>
+
+<p>A large DOM tree can slow down your page performance in multiple ways:</p>
+
+<ol>
+<li>A complex page means more bytes to download.</li>
+<li>Slower DOM access in JavaScript.</li>
+<li>Memory performance when select genral selectors like <code>li</code>.</li>
+</ol>
+
+<p><strong>How to enhance ?</strong></p>
+
+<ul>
+<li>Use <code>&lt;ng-container&gt;</code> The Angular  is a grouping element that doesn't interfere with styles or layout because Angular doesn't put it in the DOM.</li>
+<li>Use <a href="https://material.angular.io/cdk/scrolling/overview">Virtual Scrolling</a>, Infinite scroll or Pagination techniques to avoid render large list at once.</li>
+<li>Always use <code>trackBy</code> to decrease the number of DOM mutations as you know Manipulating the DOM is an expensive task.</li>
+</ul>
+
+<h2>
+  <a name="optimize-template-expressions" href="#optimize-template-expressions" class="anchor">
+  </a>
+  Optimize template expressions
+</h2>
+
+<p><strong>The Problem</strong></p>
+
+<p>Angular executes template expressions after every change detection cycle.</p>
+
+<p><strong>How to enhance ?</strong></p>
+
+<ul>
+<li>Expressions should finish quickly avoid complex expressions.</li>
+<li>Avoid Function Calls and Getters in Views instead use a custom pure pipe.</li>
+<li>Consider caching values by using <a href="https://angular.io/guide/pipes#pure-and-impure-pipes">pure pipes</a>.</li>
+</ul>
+
+<h2>
+  <a name="avoid-unnecessary-change-detection-cd" href="#avoid-unnecessary-change-detection-cd" class="anchor">
+  </a>
+  Avoid unnecessary Change Detection (CD)
+</h2>
+
+<p><strong>The Problem</strong></p>
+
+<p>On each asynchronous event, Angular performs change detection over the entire component tree. Although the code which detects for changes is optimized for inline-caching, this still can be a heavy computation in complex applications.</p>
+
+<p><strong>How to enhance?</strong></p>
+
+<ul>
+<li>OnPush Change detection stratgy</li>
+</ul>
+
+<p>Unlike the default strategy, which checks a component whenever there’s a change in your app, OnPush change detection reacts only to changes in the @input parameters, or when you manually trigger detection.<br>
+</p>
+
+<div class="highlight"><pre class="highlight typescript"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="p">...,</span>
+  <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+
+<ul>
+<li>Use <code>detach</code>ing and <code>reattach</code>ing</li>
+</ul>
+
+<p>When we use <code>deatch</code> the CD Angular will not perform check for the entire component subtree until it is reattached.<br>
+</p>
+
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">AComponent</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="k">public</span> <span class="nx">cd</span><span class="p">:</span> <span class="nx">ChangeDetectorRef</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">cd</span><span class="p">.</span><span class="nx">detach</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<ul>
+<li>Run outside angular</li>
+</ul>
+
+<p>In some cases we want to execute async call without running CD in angular as ui will not be changed, so there is a function called <code>runOutsideAngular</code> we can use to run any async function outside angular CD.<br>
+</p>
+
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">AComponent</span> <span class="k">implements</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="nx">interval</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">_zone</span><span class="p">:</span> <span class="nx">NgZone</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_zone</span><span class="p">.</span><span class="nx">runOutsideAngular</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">interval</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Triggers OutsideAngular`</span><span class="p">);</span>
+      <span class="p">},</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">ngOnDestroy</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">clearInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">interval</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<h2>
+  <a name="optimize-subscription-in-component-and-views" href="#optimize-subscription-in-component-and-views" class="anchor">
+  </a>
+  Optimize subscription in Component and Views
+</h2>
+
+<p><strong>The Problem</strong></p>
+
+<p>Subscribe to one or more observable can lead to a memory leak as the observable stream is left open.</p>
+
+<p><strong>How to enhance ?</strong></p>
+
+<ul>
+<li>Avoid subscribing to observables from components and instead subscribe to the observables from the template by using <a href="https://angular.io/guide/pipes#the-impure-asyncpipe">Async pipe</a>.</li>
+<li>If you have to subscribe from components consider <code>unsubscribe</code> inside <a href="https://angular.io/guide/lifecycle-hooks#ondestroy">ngOnDestroy</a> lifecycle hooks function.</li>
+<li>Avoid <a href="https://medium.com/better-programming/let-angular-manage-your-rxjs-subscriptions-better-9243073e94b0">multi async</a> pipe in Views.</li>
+<li>Consider using canceling operators like <code>takeUntil</code>, <code>takeWhile</code> or <code>switchMap</code>.</li>
+</ul>
+
+<h2>
+  <a name="avoid-unnecessary-emitting-inside-observable" href="#avoid-unnecessary-emitting-inside-observable" class="anchor">
+  </a>
+  Avoid unnecessary emitting inside observable
+</h2>
+
+<p><strong>The Problem</strong></p>
+
+<p>Emitting the same value multiple times or emitting unused value inside observable can lead to unnecessary change detection in angular.</p>
+
+<p><strong>How to enhance ?</strong></p>
+
+<ul>
+<li>Use <code>filter</code>: Filter items emitted by the source Observable by only emitting those that satisfy a specified predicate.</li>
+<li>Use <code>throttleTime</code>: Emits a value from the source Observable, then ignores subsequent source values for duration milliseconds, then repeats this process.</li>
+<li>Use <code>debounceTime</code>: Emits a value from the source Observable only after a particular time span has passed without another source emission.</li>
+<li>Use <code>auditTime</code>: Ignores source values for duration milliseconds, then emits the most recent value from the source Observable, then repeats this process.</li>
+<li>Use <code>distinctUntilChanged</code>: with primitive data and consider use <code>isEqual</code> function from <a href="https://lodash.com/docs/4.17.15#isEqual">lodash</a> for none-primitive data like array and object.
+</li>
+</ul>
+
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">isEqual</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash.isequal</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">distinctUntilChanged</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs/operators</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">AComponent</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{}</span>
+
+  <span class="kd">get</span> <span class="nx">observable$</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">observable</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">distinctUntilChanged</span><span class="p">(</span><span class="nx">isEqual</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<h2>
+  <a name="resources" href="#resources" class="anchor">
+  </a>
+  Resources
+</h2>
+
+<ul>
+<li><a href="https://web.dev/dom-size/">Avoid an excessive DOM size</a></li>
+<li><a href="https://angular.io/guide/structural-directives#ng-container-to-the-rescue"> to the rescue</a></li>
+<li><a href="https://blog.bitsrc.io/rxjs-patterns-efficiency-and-performance-10bbf272c3fc">RxJS Patterns: Efficiency and Performance</a></li>
+<li><a href="https://github.com/mgechev/angular-performance-checklist">Angular Performance Checklist</a></li>
+<li><a href="https://indepth.dev/these-5-articles-will-make-you-an-angular-change-detection-expert/#avoiding-common-confusions--2/">These 5 articles will make you an Angular Change Detection expert</a></li>
+<li><a href="https://dev.to/angular/3-ways-to-render-large-lists-in-angular-10nl">3 Ways to Render Large Lists in Angular</a></li>
+<li><a href="https://www.youtube.com/watch?v=I6ZvpdRM1eQ">Increasing Performance - more than a pipe dream - Tanner Edwards - YouTube</a></li>
+<li><a href="https://indepth.dev/help-angular-to-make-your-application-faster/">Help Angular to make your application faster</a></li>
+<li><a href="https://medium.com/better-programming/let-angular-manage-your-rxjs-subscriptions-better-9243073e94b0">Let Angular Manage Your RxJS Subscriptions Better</a></li>
+</ul>
+
+
+</div>
+
+
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMM9O | </title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 20px;
+  }
+}
+a:link,
+a:visited {
+  color: #222;
+}
+
+header,
+footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 4em;
+  font-size: 0.7em;
+  color: #888;
+}
+
+header {
+  border-bottom: solid 1px #eee;
+}
+
+footer {
+  margin-top: 6em;
+  border-top: solid 1px #eee;
+}
+
+header .container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 700px;
+  }
+}
+hr {
+  border-style: none;
+  border-bottom: solid 1px #eee;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.post-content img {
+  width: 100%;
+}
+
+p.meta {
+  color: #444;
+  font-size: 0.8em;
+}
+
+ul.listing {
+  list-style: none;
+  list-style-position: outside;
+  padding-top: 1em;
+  padding-left: 0;
+}
+ul.listing li {
+  margin-bottom: 3em;
+}
+ul.listing h3 {
+  padding-top: 0;
+  margin-top: 0;
+}
+ul.listing p.meta {
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif;
+  line-height: 1.1;
+  color: #111;
+}
+
+h2 {
+  font-size: 34px;
+  letter-spacing: -0.01em;
+}
+h2 small {
+  font-size: 0.5em;
+  font-weight: normal;
+  color: #888;
+}
+
+h3 {
+  margin-top: 2em;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figcaption {
+  text-align: center;
+  color: #888;
+  font-size: 0.7em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -2em;
+  padding-left: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-left: solid 3px #888;
+}
+blockquote em {
+  font-style: normal;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #eee;
+  font-size: 0.7em;
+  overflow-x: scroll;
+}
+
+nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 0;
+  list-style-type: none;
+  margin: 0 -3px;
+}
+
+nav > ul > a > li {
+  margin: 0 3px;
+  padding: 5px 15px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav > ul > li:hover {
+  background: #40407a;
+  color: #fff;
+}
+
+/** Dev.to */
+
+.ltag__link {
+  display: none;
+}
+</style>
+  </head>
+  <body>
+    <header>
+      	<div class="container">
+			<h4>Islam Muhammad</h4>
+			<nav>
+				<ul>
+					<a href="/"><li>Home</li><a/>
+					<a href="/blog"><li>Blog</li><a/>
+					<a href="/"><li>About</li><a/>
+				</ul>
+			</nav>
+		</div>
+    </header>
+    <div class="container">
+        
+<p class="meta">
+    Published on Mar 27 by <a href="https://dev.to/imm9o" target="_blank"> Islam Muhammad </a>
+    <br />
+    
+    Orignaly posted on <a href="https://dev.to/imm9o/every-performance-tips-for-angular-app-25c4" target="_blank">dev.to</a>
+</p>
+<div class="post-content">
+  <p>In this post, I have mentioned here every performance tips for angular app Load Time and in another post, I will mention run time performance tips. Just keep in mind that here in this post is just a brief list with links for more details.</p>
+
+<h1>
+  <a name="load-time-performance" href="#load-time-performance" class="anchor">
+  </a>
+  Load Time Performance
+</h1>
+
+<p>In this section all tips and tricks valid for both angular/javascript app, in general using bundle tool like <a href="https://webpack.js.org/">webpack</a>, <a href="https://rollupjs.org/guide/en/">rollup</a>, <a href="https://developers.google.com/closure/compiler">Google Closure Compiler</a> and <a href="https://cli.angular.io/">angular-cli</a> will help you to achieve that.</p>
+
+<p>We can summarize this section into one word <strong>Make it small and few</strong>.</p>
+
+<h2>
+  <a name="uglifyminify-is-the-process-of-mangling-removing-white-space-comments-etc" href="#uglifyminify-is-the-process-of-mangling-removing-white-space-comments-etc" class="anchor">
+  </a>
+  Uglify/Minify: Is the process of mangling, removing white space, comments... etc
+</h2>
+
+<p>By default this flag enabled under production enviroment when you use angular-cli or you can add it by yourself in angular.json file<br>
+</p>
+
+<div class="highlight"><pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nl">"production"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nl">"aot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"extractCss"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"namedChunks"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"vendorChunk"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"optimization"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"buildOptimizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"extractLicenses"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+
+
+<ul>
+<li>Using <a href="https://angular.io/guide/ivy">Ivy Render Engine</a>
+</li>
+</ul>
+
+<h2>
+  <a name="treeshaking-is-the-process-of-removing-unuseddead-code" href="#treeshaking-is-the-process-of-removing-unuseddead-code" class="anchor">
+  </a>
+  Tree-shaking: Is the process of removing unused/dead code
+</h2>
+
+<p>Removing any unused and unnecessary import/code from your code will help to produce small bundle size.</p>
+
+<ul>
+<li>Use <code>@Injectable({ providedIn: 'root' })</code> for service this will help angular to avoid bundleing service code if not used.</li>
+<li>Use tree-shakable-libraries like rxjs v.6 ... etc.</li>
+<li>Use ES6 modules.</li>
+</ul>
+
+<h2>
+  <a name="use-const-enum-typescript" href="#use-const-enum-typescript" class="anchor">
+  </a>
+  Use const enum: Typescript
+</h2>
+
+<ul>
+<li>
+<a href="https://twitter.com/mgechev">Minko</a> tweet this awesome <a href="https://twitter.com/mgechev/status/1222538039055941632">tweet</a> "If you don't rely on enum values calculated at runtime, use const enums to decrease the size of your JavaScript bundles".</li>
+</ul>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--s5TSntDu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://pbs.twimg.com/media/EPdT3MzVAAEwqaB%3Fformat%3Djpg%26name%3D4096x4096" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--s5TSntDu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://pbs.twimg.com/media/EPdT3MzVAAEwqaB%3Fformat%3Djpg%26name%3D4096x4096" alt="Minko Tweet" loading="lazy"></a></p>
+
+<h2>
+  <a name="remove-template-whitespace" href="#remove-template-whitespace" class="anchor">
+  </a>
+  Remove template whitespace
+</h2>
+
+<p>The ComponentMetadata interface provides the property preserveWhitespaces which by default has value false meaning that by default the Angular compiler will trim whitespaces to further reduce the size of our application.</p>
+
+<ul>
+<li><a href="https://angular.io/api/core/Component#preserveWhitespaces">preserveWhitespaces In angular doc</a></li>
+<li>You can also add this flag in <code>tsconfig.ts</code> under <code>angularCompilerOptions</code> to change default valur for all project <code>preserveWhitespaces: false</code>
+</li>
+</ul>
+
+<h2>
+  <a name="compress-imagesaudiovideo" href="#compress-imagesaudiovideo" class="anchor">
+  </a>
+  Compress images/audio/video
+</h2>
+
+<ul>
+<li>Useing <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">CSS Image Sprites</a>: An image sprite is a collection of images put into a single image.</li>
+<li><a href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/">SVG Sprites</a></li>
+<li>
+<a href="https://tinypng.com/">TinyPng</a> Smart PNG and JPEG compression.</li>
+</ul>
+
+<h2>
+  <a name="using-gzip" href="#using-gzip" class="anchor">
+  </a>
+  Using Gzip
+</h2>
+
+<p>Gzip is a method of compressing files for faster network transfers, make sure to enable it on your server.</p>
+
+<ul>
+<li><a href="https://varvy.com/pagespeed/enable-compression.html">Apache Server</a></li>
+</ul>
+
+<h2>
+  <a name="progressive-web-app-service-worker-cache" href="#progressive-web-app-service-worker-cache" class="anchor">
+  </a>
+  Progressive Web App/ Service worker cache
+</h2>
+
+<ul>
+<li>Use <a href="https://angular.io/guide/app-shell">app shell</a> and offline feature as you can it will enhance both load and run time performance for sure.</li>
+<li>
+<a href="https://angular.io/guide/service-worker-intro">Angular Service Worker</a> - aims to automate the process of managing Service Workers. It also contains Service Worker for caching static assets and one for generating application shell.</li>
+<li><a href="https://blog.angular-university.io/tag/angular-service-worker/">Angular PWA</a></li>
+</ul>
+
+<h2>
+  <a name="lazy-loading-code-splitting" href="#lazy-loading-code-splitting" class="anchor">
+  </a>
+  Lazy loading / Code Splitting
+</h2>
+
+<p>Lazy loading: is the mechanism to defer loading modules and loading it when we need it, by using <code>Code Splitting</code> features</p>
+
+<ul>
+<li>
+<a href="https://webpack.js.org/guides/code-splitting/">Code Splitting</a> - webpack</li>
+<li>
+<a href="https://angular.io/guide/lazy-loading-ngmodules">Lazy-loading feature modules</a> - angular</li>
+</ul>
+
+<h2>
+  <a name="server-side-render" href="#server-side-render" class="anchor">
+  </a>
+  Server side render
+</h2>
+
+<ul>
+<li><a href="https://angular.io/guide/universal">Server-side rendering (SSR) with Angular Universal</a></li>
+<li>Check <a href="https://github.com/angular/universal/">Angular Universal</a> repo to check availability to make server-side render with others langue like PHP (currently they are working on it)</li>
+</ul>
+
+<h2>
+  <a name="gradually-enhance-tools" href="#gradually-enhance-tools" class="anchor">
+  </a>
+  Gradually enhance tools
+</h2>
+
+<p>Keep in mind that If you can't measure it you can't enhance it, so in this section, I mention some tips and tricks to keeping eye on your code and warning you if something went wrong like bundle size becomes bigger or if there any code should not be bundled .... etc.</p>
+
+<ul>
+<li>Read this article: <a href="https://blog.angular.io/angular-tools-for-high-performance-6e10fb9a0f4a">Angular Tools for High Performance</a>
+</li>
+<li>Use: <a href="https://www.npmjs.com/package/webpack-bundle-analyzer">Webpack Bundle Analyzer</a>
+</li>
+<li>Use: <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>
+</li>
+</ul>
+
+
+</div>
+
+
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>
