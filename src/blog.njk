@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Islam Muhammad blog posts
+
+---
+
+<ul class="listing">
+{% for item in medium.posts %}
+  <li>
+    <p class="meta">Published on {{ item.readable_publish_date }}
+    <h3><a href="/posts/{{ item.slug }}">{{ item.title }}</a></h3>
+  </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,24 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "eleventy & gh-pages -d dist"
+  },
+  "home": "https://imm9o.github.io/",
+  "keywords": [],
+  "author": "IMM9O",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "axios": "^0.19.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "gh-pages": "^3.1.0"
+  }
+}

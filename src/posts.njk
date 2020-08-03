@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: medium.posts
+  size: 1
+  alias: item
+permalink: posts/{{ item.slug }}/index.html
+title: {{ item.title }}
+
+---
+
+<p class="meta">
+    Published on {{ item.readable_publish_date }} on <a href="{{ item.url }}" target="_blank">dev.to</a>
+</p>
+<div class="post-content">
+  {{ item['body_html'] | safe }}
+</div>
+
