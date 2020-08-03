@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IMM9O | Islam Muhammad blog posts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
     <style>* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -38,10 +35,9 @@ a:visited {
 
 header,
 footer {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin-bottom: 4em;
-  font-size: 0.7em;
+  padding: 0.5em 0;
+  margin-bottom: 0.7em;
+  font-size: 2em;
   color: #888;
 }
 
@@ -167,39 +163,36 @@ pre {
   overflow-x: scroll;
 }
 
-nav {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
 nav ul {
   display: -webkit-box;
   display: flex;
   margin-bottom: 0;
   list-style-type: none;
   margin: 0 -3px;
+  font-size: 0.5em;
 }
 
-nav > ul > a > li {
+nav > ul >  li {
   margin: 0 3px;
   padding: 5px 15px;
   border-radius: 0.25rem;
   cursor: pointer;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  font-size: 1rem;
   font-weight: 500;
+}
+
+nav > ul >  li > a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 nav > ul > li:hover {
   background: #40407a;
+  color: #fff;
+}
+nav > ul > li:hover > a {
   color: #fff;
 }
 
@@ -212,49 +205,48 @@ nav > ul > li:hover {
   </head>
   <body>
     <header>
-      	<div class="container">
-			<h4>Islam Muhammad</h4>
-			<nav>
-				<ul>
-					<a href="/"><li>Home</li><a/>
-					<a href="/blog"><li>Blog</li><a/>
-					<a href="/"><li>About</li><a/>
-				</ul>
-			</nav>
-		</div>
+      <div class="container">
+			  <span>Islam Muhammad</span>
+        <nav>
+          <ul>
+            <li><a href="/">Home<a/></li>
+            <li><a href="/blog">Blog<a/></li>
+            <li><a href="/">About<a/></li>
+          </ul>
+        </nav>
+		  </div>
     </header>
     <div class="container">
         
-<h2>Articles <small>(sourced from https://dev.to/api/articles?username=imm9o)</small></h2>
 <ul class="listing">
 
   <li>
-    <p class="meta">Published on Jul 11 by Islam Muhammad</p>
+    <p class="meta">Published on Jul 11
     <h3><a href="/posts/what-you-gona-lose-if-you-chose-react-over-angular-25ln">What you gonna lose if you choose react over angular</a></h3>
   </li>
 
   <li>
-    <p class="meta">Published on Apr  3 by Islam Muhammad</p>
+    <p class="meta">Published on Apr  3
     <h3><a href="/posts/every-performance-tips-for-angular-app-runtime-part-hhg">Every Performance tips for angular app (RunTime Part)</a></h3>
   </li>
 
   <li>
-    <p class="meta">Published on Mar 27 by Islam Muhammad</p>
+    <p class="meta">Published on Mar 27
     <h3><a href="/posts/every-performance-tips-for-angular-app-25c4">Every Performance tips for angular app</a></h3>
   </li>
 
   <li>
-    <p class="meta">Published on Mar 15 &#39;19 by Islam Muhammad</p>
+    <p class="meta">Published on Mar 15 &#39;19
     <h3><a href="/posts/how-i-learn-any-front-end-framework-29a2">How I learn any front-end framework</a></h3>
   </li>
 
   <li>
-    <p class="meta">Published on Mar 11 &#39;19 by Islam Muhammad</p>
+    <p class="meta">Published on Mar 11 &#39;19
     <h3><a href="/posts/angular-content-projection-the-complete-guide--3dcb">Angular Layout Composition the complete guide  </a></h3>
   </li>
 
   <li>
-    <p class="meta">Published on Feb  9 &#39;19 by Islam Muhammad</p>
+    <p class="meta">Published on Feb  9 &#39;19
     <h3><a href="/posts/i-built-my-own-css-curriculum-to-master-it-2ec2">I built my own CSS curriculum to master it</a></h3>
   </li>
 

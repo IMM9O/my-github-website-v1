@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IMM9O | </title>
+    <title>IMM9O | [object Object]</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
     <style>* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -38,10 +35,9 @@ a:visited {
 
 header,
 footer {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin-bottom: 4em;
-  font-size: 0.7em;
+  padding: 0.5em 0;
+  margin-bottom: 0.7em;
+  font-size: 2em;
   color: #888;
 }
 
@@ -167,39 +163,36 @@ pre {
   overflow-x: scroll;
 }
 
-nav {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
 nav ul {
   display: -webkit-box;
   display: flex;
   margin-bottom: 0;
   list-style-type: none;
   margin: 0 -3px;
+  font-size: 0.5em;
 }
 
-nav > ul > a > li {
+nav > ul >  li {
   margin: 0 3px;
   padding: 5px 15px;
   border-radius: 0.25rem;
   cursor: pointer;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  font-size: 1rem;
   font-weight: 500;
+}
+
+nav > ul >  li > a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 nav > ul > li:hover {
   background: #40407a;
+  color: #fff;
+}
+nav > ul > li:hover > a {
   color: #fff;
 }
 
@@ -212,16 +205,16 @@ nav > ul > li:hover {
   </head>
   <body>
     <header>
-      	<div class="container">
-			<h4>Islam Muhammad</h4>
-			<nav>
-				<ul>
-					<a href="/"><li>Home</li><a/>
-					<a href="/blog"><li>Blog</li><a/>
-					<a href="/"><li>About</li><a/>
-				</ul>
-			</nav>
-		</div>
+      <div class="container">
+			  <span>Islam Muhammad</span>
+        <nav>
+          <ul>
+            <li><a href="/">Home<a/></li>
+            <li><a href="/blog">Blog<a/></li>
+            <li><a href="/">About<a/></li>
+          </ul>
+        </nav>
+		  </div>
     </header>
     <div class="container">
         
