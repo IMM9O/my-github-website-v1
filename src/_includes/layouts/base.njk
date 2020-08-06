@@ -25,15 +25,18 @@
     <meta property="og:url" content="https://imm9o.github.io/" />
 
     <!-- StyleSheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+      {% include "./styles.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>{{ css | cssmin | safe }}</style>
 
-    <style>{% include "./styles.css" %}</style>
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="m9-container">
 			  <span>Islam Muhammad</span>
         <nav>
           <ul>
@@ -44,11 +47,6 @@
         </nav>
 		  </div>
     </header>
-    <div class="container">
         {{ content | safe }}
-    </div>
-    <footer>
-
-    </footer>
   </body>
 </html>

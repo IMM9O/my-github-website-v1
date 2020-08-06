@@ -5,62 +5,57 @@
 }
 
 body {
-  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   color: #444;
   font-size: 16px;
   line-height: 1.6;
+  border-top: solid 6px #02066F;
 }
 
-@media (min-width: 800px) {
-  body {
-    font-size: 20px;
-  }
-}
 a:link,
 a:visited {
   color: #222;
 }
 
-header,
-footer {
-  padding: 0.5em 0;
-  margin-bottom: 0.7em;
+header {
   font-size: 2em;
   color: #888;
-}
-
-header {
   border-bottom: solid 1px #eee;
 }
-
-footer {
-  margin-top: 6em;
-  border-top: solid 1px #eee;
+/**************************************/
+.m9-container {
+  margin: 0 auto;
+  padding: 2rem 0;
 }
-
-header .container {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+.m9-container .post-content img {
+  width: 100%;
 }
-
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-@media (min-width: 800px) {
-  .container {
-    width: 700px;
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  .m9-container {
+    width: 350px;
   }
 }
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .m9-container {
+    width: 500px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .m9-container {
+    width: 700px;
+  } 
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .m9-container {
+      width: 900px;
+    }    
+}
+/*************************************************************/
 hr {
   border-style: none;
   border-bottom: solid 1px #eee;
@@ -68,9 +63,6 @@ hr {
   margin-bottom: 3em;
 }
 
-.post-content img {
-  width: 100%;
-}
 
 p.meta {
   color: #444;
@@ -95,39 +87,20 @@ ul.listing p.meta {
   margin-bottom: 0;
 }
 
-figure {
-  margin-left: 0;
-  margin-right: 0;
+/** Header and navbar style */
+header > .m9-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
-figcaption {
-  text-align: center;
-  color: #888;
-  font-size: 0.7em;
-}
-
-blockquote {
-  font-style: italic;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -2em;
-  padding-left: 2em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-left: solid 3px #888;
-}
-blockquote em {
-  font-style: normal;
-}
-
-table.center td {
-  text-align: center;
+header > .m9-container > nav {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
-  display: -webkit-box;
   display: flex;
-  margin-bottom: 0;
   list-style-type: none;
   margin: 0 -3px;
   font-size: 0.5em;
@@ -156,6 +129,15 @@ nav > ul > li:hover {
 }
 nav > ul > li:hover > a {
   color: #fff;
+}
+
+.banner {
+  text-align: center;
+  background-color: #e3eaed;
+}
+.banner h1 {
+  font-weight: 900;
+  font-family: sans-serif;
 }
 
 /** Dev.to */
@@ -188,3 +170,130 @@ nav > ul > li:hover > a {
 		transform: translatey(0px);
 	}
 }
+
+
+/** Highted theme **/
+/**
+ * Nord Theme Originally by Arctic Ice Studio
+ * https://nordtheme.com
+ *
+ * Ported for PrismJS by Zane Hitchcoxc (@zwhitchcox) and Gabriel Ramos (@gabrieluizramos)
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #f8f8f2;
+   background: none;
+   font-family: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: .5em 0;
+   overflow: auto;
+   border-radius: 0.3em;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #2E3440;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #636f88;
+ }
+ 
+ .token.punctuation {
+   color: #81A1C1;
+ }
+ 
+ .namespace {
+   opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: #81A1C1;
+ }
+ 
+ .token.number {
+   color: #B48EAD;
+ }
+ 
+ .token.boolean {
+   color: #81A1C1;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: #A3BE8C;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+   color: #81A1C1;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+   color: #88C0D0;
+ }
+ 
+ .token.keyword {
+   color: #81A1C1;
+ }
+ 
+ .token.regex,
+ .token.important {
+   color: #EBCB8B;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ 
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }

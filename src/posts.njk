@@ -9,10 +9,18 @@ title: {{ item.title }}
 
 ---
 
-<p class="meta">
-    Published on {{ item.readable_publish_date }} on <a href="{{ item.url }}" target="_blank">dev.to</a>
-</p>
-<div class="post-content">
-  {{ item['body_html'] | safe }}
+<div class="banner">
+  <div class="m9-container">
+      <h1>{{ item.title }}</h1>
+  </div>
+</div>
+<div class="m9-container">
+
+  <p class="meta">
+      Published on {{ item.readable_publish_date }} on <a href="{{ item.url }}" target="_blank">dev.to</a>
+  </p>
+  <div class="post-content">
+    {{ item['body_html']  | safe }}
+  </div>
 </div>
 
