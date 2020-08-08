@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IMM9O Blog | Islam Muhammad</title>
+    <title>IMM9O Blog | [object Object]</title>
         <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Islam Muhammad" />
     <meta itemprop="image" content="./img/my-avatar.jpg" />
@@ -45,43 +45,42 @@
         </nav>
 		  </div>
     </header>
-        <div class="m9-container">
-  <div style="display: flex;">
-      <h2>Hi, I'm islam a frontend software developer</h2>
-      <img src="/assets/img/my-avatar.jpg" alt="my photo" class="my-avatar">
-  </div>
-  <table class="center">
-      <tr>
-          <td>
-              <a href="https://github.com/IMM9O">
-                <img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/github.png" alt="github logo" width="34">
-              </a>
-          </td>
-          <td>
-              <a href="https://www.linkedin.com/in/islam-muhammad/">
-                <img src="https://gfx4arab.com/wp-content/uploads/2020/06/linkedin-icon-2.svg" alt="linkedin logo" width="34">
-              </a>
-          </td>
-          <td>
-              <a href="https://twitter.com/IMM9OO">
-                <img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/twitter.png" alt="twitter logo" width="34">
-              </a>
-          </td>
-          <td>
-              <a href="https://medium.com/@IMM9O">
-                <img src="https://img.uxfree.com/wp-content/uploads/2017/03/medium-icon-white-on-black.png" alt="medium logo" width="54">
-              </a>
-          </td>
-          <td>
-              <a href="https://dev.to/imm9o">
-                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/84_Dev_logo_logos-512.png" alt="dev logo" width="34">
-              </a>
-          </td>
-      </tr>
-  <table>
-  <div align="center">
-<p><img src="https://github-readme-stats.vercel.app/api?username=IMM9O" alt="Islam's github stats"></p>
+        
+<div class="banner">
+  <div class="m9-container">
+      <h1>Support Emojis in Laravel Application</h1>
   </div>
 </div>
+<div class="m9-container">
+
+  <p class="meta">
+      Published on 2018-07-06 11:46:37 on <a href="https://medium.com/@IMM9O/support-emojis-in-laravel-application-b2ccb5f027a?source=rss-71c95d35fcb------2" target="_blank">dev.to</a>
+  </p>
+  <div class="post-content">
+    
+<p>How to store, read and update emojis in laravel application</p>
+<p>Recently i was working in a project that require support for emojis to store and read it from database using inside a laravel application and in this short tutorials i will show you how to make this happen.</p>
+<p>First: Make sure to change database collection to ( utf8mb4_unicode_ci )</p>
+<p>Second: In your database.php config file, make sure to set the charset and collation to utf8mb4:</p>
+<pre>'mysql' =&gt; [<br>            'driver'    =&gt; 'mysql',<br>            'host'      =&gt; env('DB_HOST', 'localhost'),<br>            'database'  =&gt; env('DB_DATABASE', 'forge'),<br>            'username'  =&gt; env('DB_USERNAME', 'forge'),<br>            'password'  =&gt; env('DB_PASSWORD', ''),<br>            'charset'   =&gt; 'utf8mb4',<br>            'collation' =&gt; 'utf8mb4_unicode_ci',<br>]</pre>
+<p>Third: Make sure to store emojis in string column</p>
+<h4>Some problem you may face</h4>
+<p><strong>Specified key was too long error</strong><br>As outlined in the Migrations <a href="https://laravel.com/docs/master/migrations#creating-indexes">guide</a> to fix this all you have to do is edit your AppServiceProvider.php file and inside the boot method set a default string length:</p>
+<pre>use Illuminate\Support\Facades\Schema;  <br>public function boot() {  <br>    Schema::defaultStringLength(191);<br>}</pre>
+<p>More Info <a href="https://laravel-news.com/laravel-5-4-key-too-long-error">Here</a></p>
+<h4>Final thoughts</h4>
+<p>This will make your string with emojis stored in unified format to replace it with images during view you can use one of this projects below inside laravel application or in front-end part of this application.</p>
+<ul>
+<li><a href="https://github.com/unicodeveloper/laravel-emoji">https://github.com/unicodeveloper/laravel-emoji</a></li>
+<li><a href="https://github.com/iamcal/js-emoji">https://github.com/iamcal/js-emoji</a></li>
+<li><a href="https://github.com/twitter/twemoji">https://github.com/twitter/twemoji</a></li>
+</ul>
+<p>Happy Coding 👨‍💻</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=b2ccb5f027a" width="1" height="1">
+
+  </div>
+</div>
+
+
   </body>
 </html>
