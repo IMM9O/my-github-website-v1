@@ -6,7 +6,7 @@ title: Islam Muhammad
 <div class="m9-container">
   <div style="display: flex;">
       <h2>Hi, I'm islam a frontend software developer</h2>
-      <img src="./img/my-avatar.jpg" alt="my photo" class="my-avatar">
+      <img src="/assets/img/my-avatar.jpg" alt="my photo" class="my-avatar">
   </div>
   <table class="center">
       <tr>

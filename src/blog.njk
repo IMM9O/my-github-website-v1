@@ -5,10 +5,10 @@ title: Islam Muhammad blog posts
 ---
 <div class="m9-container">
   <ul class="listing">
-  {% for item in medium.posts %}
+  {% for item in dev.posts %}
     <li>
       <p class="meta">Published on {{ item.readable_publish_date }}
-      <h3><a href="/posts/{{ item.slug }}">{{ item.title }}</a></h3>
+      <h3><a href="/post/{{ item.slug }}">{{ item.title }}</a></h3>
     </li>
   {% endfor %}
   </ul>

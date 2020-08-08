@@ -1,29 +1,19 @@
 var axios = require('axios');
-var toJSON = require('xml2js').parseString;
+var slug = require('slug');
 
-var url =
-  process.env.MEDIUM_FEED || 'https://dev.to/api/articles?username=imm9o';
-var postUrl = 'https://dev.to/api/articles';
-var authorLink = 'https://dev.to/imm9o';
-
-const getPostData = async (item) => {
-  return axios.get(`${postUrl}/${item.id}`);
-};
-
-const getPostsData = async (list) => {
-  return Promise.all(list.map((item) => getPostData(item)));
-};
+var url = process.env.MEDIUM_FEED || 'https://medium.com/feed/@IMM9O';
+var authorLink = 'https://medium.com/@IMM9O';
 
 module.exports = () => {
   return new Promise((resolve, reject) => {
-    axios.get(url).then((response) => {
-      const blogList = [...response.data];
-      getPostsData(blogList).then((res) => {
-        const posts = res.map((responses) => {
-          return { ...responses.data, authorLink };
-        });
+    axios
+      .get('https://api.rss2json.com/v1/api.json?rss_url=' + url)
+      .then((response) => {
+        const res = response.data.items;
+        const posts = res
+          .filter((item) => item.categories.length > 0)
+          .map((item) => ({ ...item, slug: slug(item.title) }));
         resolve({ url, posts });
       });
-    });
   });
 };
