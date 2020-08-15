@@ -13,10 +13,34 @@ body {
   border-top: solid 6px #02066F;
 }
 
-a:link,
-a:visited {
-  color: #222;
+a {
+  text-decoration: none;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:after {
+  border-radius: 1em;
+  border-top: .1em solid #2F56B0;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+  transition: right .4s cubic-bezier(0,.5,0,1);
+}
+
+a:hover:after {
+  right: 0;
+}
+
 
 header {
   font-size: 2em;
