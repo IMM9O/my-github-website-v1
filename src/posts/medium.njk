@@ -3,7 +3,7 @@ pagination:
   data: medium.posts
   size: 1
   alias: item
-permalink: post/{{ item.slug }}/index.html
+permalink: post/{{ item.title | slug }}/index.html
 title: {{ item.title }}
 
 ---

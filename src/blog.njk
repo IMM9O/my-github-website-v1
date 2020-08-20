@@ -7,7 +7,7 @@ title: Islam Muhammad blog posts
   {% for item in dev.posts %}
     <li>
       <p class="meta">Published on {{ item.readable_publish_date }}
-      <h3><a href="/post/{{ item.slug }}">{{ item.title }}</a></h3>
+      <h3><a href="/post/{{ item.title | slug }}">{{ item.title }}</a></h3>
     </li>
   {% endfor %}
   </ul>

@@ -1,5 +1,4 @@
 var axios = require('axios');
-var slug = require('slug');
 
 var url = process.env.MEDIUM_FEED || 'https://medium.com/feed/@IMM9O';
 var authorLink = 'https://medium.com/@IMM9O';
@@ -12,7 +11,7 @@ module.exports = () => {
         const res = response.data.items;
         const posts = res
           .filter((item) => item.categories.length > 0)
-          .map((item) => ({ ...item, slug: slug(item.title) }));
+          .map((item) => ({ ...item }));
         resolve({ url, posts });
       });
   });
