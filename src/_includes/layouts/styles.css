@@ -13,9 +13,6 @@ body {
   border-top: solid 6px #02066F;
 }
 
-a {
-  text-decoration: none;
-}
 
 a:hover {
   text-decoration: none;
@@ -26,7 +23,7 @@ a {
   position: relative;
 }
 
-a:after {
+body > .m9-container a:after {
   border-radius: 1em;
   border-top: .1em solid #2F56B0;
   content: "";
@@ -37,7 +34,7 @@ a:after {
   transition: right .4s cubic-bezier(0,.5,0,1);
 }
 
-a:hover:after {
+body > .m9-container a:hover:after {
   right: 0;
 }
 
@@ -132,10 +129,11 @@ nav ul {
 
 nav > ul >  li {
   margin: 0 3px;
-  padding: 5px 15px;
+  width: 70px;
+  text-align: center;
+  padding: 5px 0;
   border-radius: 0.25rem;
   cursor: pointer;
-  -webkit-transition: all 250ms;
   transition: all 250ms;
   font-weight: 500;
 }
