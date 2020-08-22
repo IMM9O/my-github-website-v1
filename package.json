@@ -11,8 +11,7 @@
   "home": "https://imm9o.github.io/",
   "keywords": [],
   "author": "IMM9O",
-  "license": "ISC",
-  "dependencies": {},
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
@@ -20,7 +19,6 @@
     "clean-css": "^4.2.3",
     "gh-pages": "^3.1.0",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.24.1",
-    "slug": "^3.3.4"
+    "luxon": "^1.24.1"
   }
 }
