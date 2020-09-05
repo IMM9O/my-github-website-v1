@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMM9O Blog | Web Components with angular</title>
+        <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Islam Muhammad" />
+    <meta itemprop="image" content="/assets/img/my-avatar.jpg" />
+    <meta itemprop="description" content="Islam Muhammad Portfolio" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Islam Muhammad" />
+    <meta name="twitter:image" content="/assets/img/my-avatar.jpg" />
+    <meta name="twitter:description" content="Islam Muhammad Portfolio" />
+
+    <!-- Open Graph data -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Islam Muhammad" />
+    <meta property="og:image" content="/assets/img/my-avatar.jpg" />
+    <meta property="og:image:secure_url" content="/assets/img/my-avatar.jpg" />
+    <meta property="og:description" content="Islam Muhammad Portfolio" />
+    <meta property="og:url" content="https://imm9o.github.io/" />
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
+    <!-- capture the CSS content as a Nunjucks variable -->
+    
+    <!-- feed it through our cssmin filter to minify -->
+    <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';color:#444;font-size:16px;line-height:1.6;border-top:solid 6px #02066f}a:hover{text-decoration:none}a{text-decoration:none;position:relative}body>.m9-container a:after{border-radius:1em;border-top:.1em solid #2f56b0;content:"";position:absolute;right:100%;bottom:.14em;left:0;transition:right .4s cubic-bezier(0,.5,0,1)}body>.m9-container a:hover:after{right:0}header{font-size:2em;color:#888;border-bottom:solid 1px #eee}.m9-container{margin:0 auto;padding:2rem}.m9-container.post-content img{width:100%}@media (min-width:576px){.m9-container{width:350px}}@media (min-width:768px){.m9-container{width:500px}}@media (min-width:992px){.m9-container{width:700px}}@media (min-width:1200px){.m9-container{width:900px}}hr{border-style:none;border-bottom:solid 1px #eee;margin-top:2em;margin-bottom:3em}p.meta{color:#444;font-size:.8em}ul.listing{list-style:none;list-style-position:outside;padding-top:1em;padding-left:0}ul.listing li{margin-bottom:3em}ul.listing h3{padding-top:0;margin-top:0}ul.listing p.meta{padding-bottom:.5em;margin-bottom:0}header>.m9-container{display:flex;justify-content:space-between;padding:0 2rem}header>.m9-container>nav{display:flex;align-items:center}nav ul{display:flex;list-style-type:none;margin:0 -3px;font-size:.5em}nav>ul>li{margin:0 3px;width:70px;text-align:center;padding:5px 0;border-radius:.25rem;cursor:pointer;transition:all 250ms;font-weight:500}nav>ul>li>a{height:100%;width:100%;display:block;text-decoration:none}nav>ul>li:hover{background:#40407a;color:#fff}nav>ul>li:hover>a{color:#fff}.banner{text-align:center;background-color:#e3eaed}.banner h1{font-weight:900;font-family:sans-serif}.ltag__link{display:none}.my-avatar{border-radius:50%;width:150px;height:150px;box-shadow:0 5px 15px 0 rgba(0,0,0,.6);transform:translatey(0);animation:float 6s ease-in-out infinite;border:5px solid #02066f}@keyframes float{0%{box-shadow:0 5px 15px 0 rgba(0,0,0,.6);transform:translatey(0)}50%{box-shadow:0 25px 15px 0 rgba(0,0,0,.2);transform:translatey(-20px)}100%{box-shadow:0 5px 15px 0 rgba(0,0,0,.6);transform:translatey(0)}}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;font-family:"Fira Code",Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2e3440}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#636f88}.token.punctuation{color:#81a1c1}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#81a1c1}.token.number{color:#b48ead}.token.boolean{color:#81a1c1}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a3be8c}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#81a1c1}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#88c0d0}.token.keyword{color:#81a1c1}.token.important,.token.regex{color:#ebcb8b}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0/quicklink.umd.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        quicklink.listen();
+      });
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <div class="m9-container">
+			  <span>IMM9O</span>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </nav>
+		  </div>
+    </header>
+        <div class="banner">
+  <div class="m9-container">
+      <h1>Web Components with angular</h1>
+  </div>
+</div>
+<div class="m9-container post-content">
+<p><img src="https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png" alt="Create Stander Web Components using angular elements"></p>
+<p>Create Stander Web Components using angular elements</p>
+<p>How to build web components using popular front-end framework angular.</p>
+<h1>Before we start</h1>
+<p>This article assume you have some experience build projects using angular and angular-cli it will not meant to be fully tutorials about angular or angular cli, so be careful.</p>
+<p>In this post i will show you how to extract any component built using angular framework to use it outside angular projects using a new package called angular elements.</p>
+<h1>What is Web Component ?</h1>
+<blockquote>
+<p>Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps. (Source: MDN)</p>
+</blockquote>
+<h1>What make a web component ?</h1>
+<ul>
+<li><strong>Custom Elements</strong>The <a href="https://w3c.github.io/webcomponents/spec/custom/">Custom Elements specification</a> lays the foundation for designing and using new types of DOM elements.</li>
+<li><strong>Shadow DOM</strong>The <a href="https://w3c.github.io/webcomponents/spec/shadow/">shadow DOM specification</a> defines how to use encapsulated style and markup in web components.</li>
+<li><strong>ES Modules</strong>The <a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system">ES Modules specification</a> defines the inclusion and reuse of JS documents in a standards based, modular, performant way.</li>
+<li><strong>HTML Template</strong>The <a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element/">HTML template element specification</a> defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</li>
+</ul>
+<h1>Why web component ?</h1>
+<blockquote>
+<p>As developers, we all know that reusing code as much as possible is a good idea. This has traditionally not been so easy for custom markup structures — think of the complex HTML (and associated style and script) you’ve sometimes had to write to render custom UI controls, and how using them multiple times can turn your page into a mess if you are not careful. ( MDN )</p>
+</blockquote>
+<ul>
+<li><strong>Reusability</strong></li>
+<li><strong>Maintainability</strong></li>
+<li><strong>Productivity</strong></li>
+<li><strong>Composability</strong></li>
+<li><strong>Following web standard</strong></li>
+</ul>
+<h1>Angular <Angular-Element></h1>
+<p><img src="https://miro.medium.com/max/500/1*1Dx9Yl54R7EZ0Cr4w6TxlA.png" alt="Angular Element Logo"></p>
+<p>Angular Element Logo</p>
+<h2>What are Angular Elements?</h2>
+<p>Imagine that you’ve developed an awesome Angular component. However, in real life, not all the web applications are Angular-based or even <a href="https://en.wikipedia.org/wiki/Single-page_application">single-page</a> application. You wish to use your amazing component as part of any web application, website or any CMS like wordpress.</p>
+<p>Angular Team provide to us a new way to extract this component to use it outside our angular project and that we call it <strong>Angular Elements.</strong></p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Angular CLI (version 6 or higher)</li>
+<li>NPM (version 5 or higher)</li>
+<li>Node (version 10.8.0 or higher)</li>
+</ul>
+<h2>1. Setup Your Angular Project.</h2>
+<p>Start up a new Angular project using the Angular CLI:</p>
+<p>Install some polyfills:</p>
+<pre><code>$ npm i @webcomponents/custom-elements --save
+</code></pre>
+<p>Import those packages into <code>polyfills.ts</code> file:</p>
+<h2>2. Create New Component</h2>
+<p>Create normal angular component with <code>Native</code> mode in encapsulation properties.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><em>Input will named in kebab-case for example (post-image instead of postImage)</em></li>
+<li><em>Component outputs are dispatched as HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">Custom Events</a>, with the name of the custom event matching the output name.</em></li>
+</ul>
+<h2>3. Update NgModule</h2>
+<p>Change <code>app.module</code> to use regular angular component as custom element</p>
+<p>as you can see from above we remove bootstrap array for module and add our generated component in entryComponents, and finally we define it inside <code>ngDoBootstrap</code> function (<strong>Note:</strong> we can change name of element not required to be exact as angular component name) and from this we can use it without root component just move to index.html and add some modification</p>
+<p>To show the results run this command</p>
+<h2>4. Package Your Angular Element</h2>
+<p>Now it is the time to package this thing up!, there is several ways</p>
+<p>**Build using angular cli:**This will generate the entire app inside dist folder</p>
+<p>**Build &amp; Bundle it in one file:**To use it anywhere else but this way require some additional pages to use (<code>concat &amp; fs-extra</code> ) packages.</p>
+<p>**Create <code>build-elements.js</code> file inside project root folder:**We will use this file to bundle our generated files inside dist folder into one file and save it inside <code>elements</code> folder.</p>
+<p>**Add new script into packages.json file:**To use it to build our element.</p>
+<h2>Use Your Angular Element</h2>
+<p>In the new <code>elements</code> folder create an <code>Index.html</code> file and add the following contents.</p>
+<h1>Final Word</h1>
+<p>It is a good practice to use standard web platform offers as we already know that not all the web are a single page app or built with angular, using a framework-agnostic way are good in many cases.</p>
+<blockquote>
+<p>Note: A minimal, self-contained version of the Angular framework will be injected as a service to support the component’s change-detection and data-binding functionality. ( angular.io )</p>
+</blockquote>
+<h1>Need More</h1>
+<p>Here is a list of a good resources explain angular elements.</p>
+</div>
+  </body>
+</html>
