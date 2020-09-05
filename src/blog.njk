@@ -1,14 +1,11 @@
 ---
 layout: layouts/base.njk
 title: Islam Muhammad blog posts
+pagination:
+  data: collections.post
+  size: 20
+  alias: posts
 ---
 <div class="m9-container">
-  <ul class="listing">
-  {% for item in dev %}
-    <li>
-      <p class="meta">Published on {{ item.readable_publish_date }}
-      <h3><a href="/post/{{ item.title | slug }}">{{ item.title }}</a></h3>
-    </li>
-  {% endfor %}
-  </ul>
+  {% include "postslist.njk" %}
 </div>
