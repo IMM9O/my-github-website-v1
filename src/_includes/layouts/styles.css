@@ -47,7 +47,7 @@ header {
 /**************************************/
 .m9-container {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 .m9-container.post-content img {
   width: 100%;
@@ -112,7 +112,7 @@ ul.listing p.meta {
 header > .m9-container {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 2rem;
 }
 
 header > .m9-container > nav {

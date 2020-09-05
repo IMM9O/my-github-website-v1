@@ -9,15 +9,6 @@ title: Islam Muhammad
 
   My name is islam muhammad (AKA: IMM9O), I'm frontend software developer with industry experience building websites and web applications. I specialize in JavaScript and have professional experience working with PHP, Angular, React, Ionic, Codeigniter, OpenCart, Laravel, MySQL database and familiar with Vue and WordPress. I love reading about architecture, performance and scalability 
 
-  # Quick overview
-  <div style="display: flex; justify-content: space-between; align-items: center;"> 
-
-  ![My GitHub States](https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=IMM9O)
-
-  ![Islam's github stats](https://github-readme-stats.anuraghazra1.vercel.app/api?username=IMM9O&show_icons=true&line_height=27)
-
-  </div>
-
   
   <table>
       <tr>
