@@ -49,7 +49,7 @@ header {
   margin: 0 auto;
   padding: 2rem 0;
 }
-.m9-container .post-content img {
+.m9-container.post-content img {
   width: 100%;
 }
 /* Small devices (landscape phones, 576px and up) */

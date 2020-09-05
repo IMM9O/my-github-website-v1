@@ -10,7 +10,7 @@ tags: ['angular', 'react', 'javascript']
   </div>
 </div>
 
-<div class="m9-container">
+<div class="m9-container post-content">
 
 # What you gonna lose if you choose react over angular
 
@@ -52,7 +52,8 @@ What react offers similar to **Dependency injection** in angular?
 
 For sharing state react has a [context](https://reactjs.org/docs/context.html), which provides a way to pass data through the component tree without having to pass props down manually at every level. This doesn't solve the scope issue after all context are global state and limited only to sharing state.
 
-For sharing functionality you can use class but if you want it a singleton class or loaded it when you need it like angular you gonna build it with your self as react team doesn't provide such a solution for this problem.
+For sharing functionality you can use class but if you want it a singleton class or loaded it when you need it like angular
+you gonna build it with your self as react team doesn't provide such a solution for this problem.
 
 ## Separation of concerns
 

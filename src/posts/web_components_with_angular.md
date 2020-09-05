@@ -10,7 +10,7 @@ tags: ['angular', 'javascript']
   </div>
 </div>
 
-<div class="m9-container">
+<div class="m9-container post-content">
 
 ![Create Stander Web Components using angular elements](https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png)
 
